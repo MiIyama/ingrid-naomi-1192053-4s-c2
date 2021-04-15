@@ -17,6 +17,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+    }
+
+    fun compra(view: View) {
+        val tela2 = Intent(this, Tela2::class.java)
+        startActivity(tela2)
+
         val layoutLista: LinearLayout = findViewById(R.id.layout_lista)
         val apiCachorro = ConexaoApi.criar()
 
@@ -35,22 +41,10 @@ class MainActivity : AppCompatActivity() {
             override fun onFailure(call: Call<Cachorro>, t: Throwable) {
                 Toast.makeText(baseContext, "Erro: ${t.message!!}", Toast.LENGTH_SHORT).show()
 
-
             }
-
-
         })
     }
-}
 
 
 }
-
-fun compra(view: View) {
-    val tela2 = Intent(this, Tela2::class.java)
-    startActivity(tela2)
-
-
-}
-
 }
