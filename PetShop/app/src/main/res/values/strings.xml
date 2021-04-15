@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PetShop</string>
+    <string name="id_cachorro1">Insira o identificador do cachorro 1:</string>
+    <string name="id_cachorro2">Insira o identificador do cachorro 1:</string>
+    <string name="titulo">PetShop</string>
+    <string name="botao">Comprar cachorros</string>
+</resources>
