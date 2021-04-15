@@ -21,8 +21,13 @@ class MainActivity : AppCompatActivity() {
 
     fun compra(view: View) {
         val tela2 = Intent(this, Tela2::class.java)
-        startActivity(tela2)
 
+
+        tela2.putExtra("cachorro", "Dalmata")
+        tela2.putExtra("raca", "Cartwright")
+        tela2.putExtra("indicadoCriancas", true)
+
+        startActivity(tela2)
         val layoutLista: LinearLayout = findViewById(R.id.layout_lista)
         val apiCachorro = ConexaoApi.criar()
 
